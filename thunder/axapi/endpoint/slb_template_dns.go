@@ -6,7 +6,7 @@ import (
 	"net/url"
 )
 
-//based on ACOS 5_2_1-P4_90
+// based on ACOS 5_2_1-P4_90
 type SlbTemplateDns struct {
 	Inst struct {
 		AddPaddingToClient        string                               `json:"add-padding-to-client"`

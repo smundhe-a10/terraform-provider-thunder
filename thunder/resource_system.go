@@ -536,11 +536,11 @@ func resourceSystem() *schema.Resource {
 												},
 												"geol_ipv4_mask": {
 													Type: schema.TypeString, Optional: true, Description: "Specify IPv4 mask [shared partition only]",
-													ValidateFunc:  axapi.IsIpv4NetmaskBrief,
+													ValidateFunc: axapi.IsIpv4NetmaskBrief,
 												},
 												"ip_addr2": {
 													Type: schema.TypeString, Optional: true, Description: "Specify IP address range [shared partition only]",
-													ValidateFunc:  validation.IsIPv4Address,
+													ValidateFunc: validation.IsIPv4Address,
 												},
 												"first_ipv6_address": {
 													Type: schema.TypeString, Optional: true, Description: "Specify IPv6 address [shared partition only]",
@@ -548,11 +548,11 @@ func resourceSystem() *schema.Resource {
 												},
 												"geol_ipv6_mask": {
 													Type: schema.TypeInt, Optional: true, Description: "Specify IPv6 mask [shared partition only]",
-													ValidateFunc:  validation.IntBetween(0, 128),
+													ValidateFunc: validation.IntBetween(0, 128),
 												},
 												"ipv6_addr2": {
 													Type: schema.TypeString, Optional: true, Description: "Specify IPv6 address range [shared partition only]",
-													ValidateFunc:  validation.IsIPv6Address,
+													ValidateFunc: validation.IsIPv6Address,
 												},
 											},
 										},

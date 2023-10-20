@@ -32,11 +32,11 @@ func resourceClassList() *schema.Resource {
 						},
 						"ac_value": {
 							Type: schema.TypeString, Optional: true, Description: "Specify value string",
-							ValidateFunc:  validation.StringLenBetween(1, 639),
+							ValidateFunc: validation.StringLenBetween(1, 639),
 						},
 						"gtp_rate_limit_policy_str": {
 							Type: schema.TypeString, Optional: true, Description: "GTP Rate Limit Template Name",
-							ValidateFunc:  validation.StringLenBetween(1, 128),
+							ValidateFunc: validation.StringLenBetween(1, 128),
 						},
 					},
 				},
@@ -55,15 +55,15 @@ func resourceClassList() *schema.Resource {
 						},
 						"dns_lid": {
 							Type: schema.TypeInt, Optional: true, Description: "Use Limit ID defined in template (Specify LID index)",
-							ValidateFunc:  validation.IntBetween(1, 1023),
+							ValidateFunc: validation.IntBetween(1, 1023),
 						},
 						"dns_glid": {
 							Type: schema.TypeInt, Optional: true, Description: "Use global Limit ID (Specify global LID index)",
-							ValidateFunc:  validation.IntBetween(1, 1023),
+							ValidateFunc: validation.IntBetween(1, 1023),
 						},
 						"shared_partition_dns_glid": {
 							Type: schema.TypeInt, Optional: true, Default: 0, Description: "Reference a glid from shared partition",
-							ValidateFunc:  validation.IntBetween(0, 1),
+							ValidateFunc: validation.IntBetween(0, 1),
 						},
 						"dns_glid_shared": {
 							Type: schema.TypeInt, Optional: true, Description: "Use global Limit ID",
@@ -86,15 +86,15 @@ func resourceClassList() *schema.Resource {
 						},
 						"lid": {
 							Type: schema.TypeInt, Optional: true, Description: "Use Limit ID defined in template (Specify LID index)",
-							ValidateFunc:  validation.IntBetween(1, 1023),
+							ValidateFunc: validation.IntBetween(1, 1023),
 						},
 						"glid": {
 							Type: schema.TypeInt, Optional: true, Description: "Use global Limit ID (Specify global LID index)",
-							ValidateFunc:  validation.IntBetween(1, 1023),
+							ValidateFunc: validation.IntBetween(1, 1023),
 						},
 						"shared_partition_glid": {
 							Type: schema.TypeInt, Optional: true, Default: 0, Description: "Reference a glid from shared partition",
-							ValidateFunc:  validation.IntBetween(0, 1),
+							ValidateFunc: validation.IntBetween(0, 1),
 						},
 						"glid_shared": {
 							Type: schema.TypeInt, Optional: true, Description: "Use global Limit ID",
@@ -102,15 +102,15 @@ func resourceClassList() *schema.Resource {
 						},
 						"lsn_lid": {
 							Type: schema.TypeInt, Optional: true, Description: "LSN Limit ID (LID index)",
-							ValidateFunc:  validation.IntBetween(1, 1023),
+							ValidateFunc: validation.IntBetween(1, 1023),
 						},
 						"lsn_radius_profile": {
 							Type: schema.TypeInt, Optional: true, Description: "LSN RADIUS Profile Index",
-							ValidateFunc:  validation.IntBetween(1, 16),
+							ValidateFunc: validation.IntBetween(1, 16),
 						},
 						"gtp_rate_limit_policy_v4": {
 							Type: schema.TypeString, Optional: true, Description: "GTP Rate Limit Template Name",
-							ValidateFunc:  validation.StringLenBetween(1, 128),
+							ValidateFunc: validation.StringLenBetween(1, 128),
 						},
 						"age": {
 							Type: schema.TypeInt, Optional: true, Description: "Specify age in minutes",
@@ -129,15 +129,15 @@ func resourceClassList() *schema.Resource {
 						},
 						"v6_lid": {
 							Type: schema.TypeInt, Optional: true, Description: "Use Limit ID defined in template (Specify LID index)",
-							ValidateFunc:  validation.IntBetween(1, 1023),
+							ValidateFunc: validation.IntBetween(1, 1023),
 						},
 						"v6_glid": {
 							Type: schema.TypeInt, Optional: true, Description: "Use global Limit ID (Specify global LID index)",
-							ValidateFunc:  validation.IntBetween(1, 1023),
+							ValidateFunc: validation.IntBetween(1, 1023),
 						},
 						"shared_partition_v6_glid": {
 							Type: schema.TypeInt, Optional: true, Default: 0, Description: "Reference a glid from shared partition",
-							ValidateFunc:  validation.IntBetween(0, 1),
+							ValidateFunc: validation.IntBetween(0, 1),
 						},
 						"v6_glid_shared": {
 							Type: schema.TypeInt, Optional: true, Description: "Use global Limit ID",
@@ -145,15 +145,15 @@ func resourceClassList() *schema.Resource {
 						},
 						"v6_lsn_lid": {
 							Type: schema.TypeInt, Optional: true, Description: "LSN Limit ID (LID index)",
-							ValidateFunc:  validation.IntBetween(1, 1023),
+							ValidateFunc: validation.IntBetween(1, 1023),
 						},
 						"v6_lsn_radius_profile": {
 							Type: schema.TypeInt, Optional: true, Description: "LSN RADIUS Profile Index",
-							ValidateFunc:  validation.IntBetween(1, 16),
+							ValidateFunc: validation.IntBetween(1, 16),
 						},
 						"gtp_rate_limit_policy_v6": {
 							Type: schema.TypeString, Optional: true, Description: "GTP Rate Limit Template Name",
-							ValidateFunc:  validation.StringLenBetween(1, 128),
+							ValidateFunc: validation.StringLenBetween(1, 128),
 						},
 						"v6_age": {
 							Type: schema.TypeInt, Optional: true, Description: "Specify age in minutes",
@@ -176,7 +176,7 @@ func resourceClassList() *schema.Resource {
 						},
 						"str_lid_dummy": {
 							Type: schema.TypeInt, Optional: true, Default: 0, Description: "Use Limit ID defined in template",
-							ValidateFunc:  validation.IntBetween(0, 1),
+							ValidateFunc: validation.IntBetween(0, 1),
 						},
 						"str_lid": {
 							Type: schema.TypeInt, Optional: true, Description: "LID index",
@@ -184,15 +184,15 @@ func resourceClassList() *schema.Resource {
 						},
 						"str_glid_dummy": {
 							Type: schema.TypeInt, Optional: true, Default: 0, Description: "Use global Limit ID",
-							ValidateFunc:  validation.IntBetween(0, 1),
+							ValidateFunc: validation.IntBetween(0, 1),
 						},
 						"str_glid": {
 							Type: schema.TypeInt, Optional: true, Description: "Global LID index",
-							ValidateFunc:  validation.IntBetween(1, 1023),
+							ValidateFunc: validation.IntBetween(1, 1023),
 						},
 						"shared_partition_str_glid": {
 							Type: schema.TypeInt, Optional: true, Default: 0, Description: "Reference a glid from shared partition",
-							ValidateFunc:  validation.IntBetween(0, 1),
+							ValidateFunc: validation.IntBetween(0, 1),
 						},
 						"str_glid_shared": {
 							Type: schema.TypeInt, Optional: true, Description: "Use global Limit ID",

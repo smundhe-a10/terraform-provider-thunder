@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-//based on ACOS 5_2_1-P4_81
+// based on ACOS 5_2_1-P4_81
 type RouterBgp struct {
 	Inst struct {
 		AddressFamily        RouterBgpAddressFamily          `json:"address-family"`

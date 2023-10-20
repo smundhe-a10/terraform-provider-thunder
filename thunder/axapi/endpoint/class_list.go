@@ -6,7 +6,7 @@ import (
 	"net/url"
 )
 
-//based on ACOS 5_2_1-P4_81
+// based on ACOS 5_2_1-P4_81
 type ClassList struct {
 	Inst struct {
 		AcList   []ClassListAcList   `json:"ac-list"`

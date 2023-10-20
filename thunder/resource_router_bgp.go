@@ -1277,35 +1277,35 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"update_source_ip": {
 										Type: schema.TypeString, Optional: true, Description: "IP address",
-										ValidateFunc:  validation.IsIPv4Address,
+										ValidateFunc: validation.IsIPv4Address,
 									},
 									"update_source_ipv6": {
 										Type: schema.TypeString, Optional: true, Description: "IPv6 address",
-										ValidateFunc:  validation.IsIPv6Address,
+										ValidateFunc: validation.IsIPv6Address,
 									},
 									"ethernet": {
 										Type: schema.TypeInt, Optional: true, Description: "Ethernet interface (Port number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"loopback": {
 										Type: schema.TypeInt, Optional: true, Description: "Loopback interface (Port number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"ve": {
 										Type: schema.TypeInt, Optional: true, Description: "Virtual ethernet interface (Virtual ethernet interface number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"trunk": {
 										Type: schema.TypeInt, Optional: true, Description: "Trunk interface (Trunk interface number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"lif": {
 										Type: schema.TypeString, Optional: true, Description: "Logical interface (Lif interface name)",
-										ValidateFunc:  validation.StringLenBetween(1, 15),
+										ValidateFunc: validation.StringLenBetween(1, 15),
 									},
 									"tunnel": {
 										Type: schema.TypeInt, Optional: true, Description: "Tunnel interface (Tunnel interface number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"weight": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Set default weight for routes from this neighbor",
@@ -1331,7 +1331,7 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"peer_group_name": {
 										Type: schema.TypeString, Optional: true, Description: "Configure peer-group (peer-group name)",
-										ValidateFunc:  validation.StringLenBetween(1, 128),
+										ValidateFunc: validation.StringLenBetween(1, 128),
 									},
 									"activate": {
 										Type: schema.TypeInt, Optional: true, Default: 1, Description: "Enable the Address Family for this Neighbor",
@@ -1339,7 +1339,7 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"advertisement_interval": {
 										Type: schema.TypeInt, Optional: true, Description: "Minimum interval between sending BGP routing updates (time in seconds)",
-										ValidateFunc:  validation.IntBetween(1, 600),
+										ValidateFunc: validation.IntBetween(1, 600),
 									},
 									"allowas_in": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Accept as-path with my AS present in it",
@@ -1351,7 +1351,7 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"as_origination_interval": {
 										Type: schema.TypeInt, Optional: true, Description: "Minimum interval between sending AS-origination routing updates (time in seconds)",
-										ValidateFunc:  validation.IntBetween(1, 600),
+										ValidateFunc: validation.IntBetween(1, 600),
 									},
 									"dynamic": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Advertise dynamic capability to this neighbor",
@@ -1375,7 +1375,7 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"default_originate": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Originate default route to this neighbor",
-										ValidateFunc:  validation.IntBetween(0, 1),
+										ValidateFunc: validation.IntBetween(0, 1),
 									},
 									"route_map": {
 										Type: schema.TypeString, Optional: true, Description: "Route-map to specify criteria to originate default (route-map name)",
@@ -1387,7 +1387,7 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"disallow_infinite_holdtime": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "BGP per neighbor disallow-infinite-holdtime",
-										ValidateFunc:  validation.IntBetween(0, 1),
+										ValidateFunc: validation.IntBetween(0, 1),
 									},
 									"distribute_lists": {
 										Type: schema.TypeList, Optional: true, Description: "",
@@ -1472,7 +1472,7 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"next_hop_self": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Disable the next hop calculation for this neighbor",
-										ValidateFunc:  validation.IntBetween(0, 1),
+										ValidateFunc: validation.IntBetween(0, 1),
 									},
 									"override_capability": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Override capability negotiation result",
@@ -1550,39 +1550,39 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"unsuppress_map": {
 										Type: schema.TypeString, Optional: true, Description: "Route-map to selectively unsuppress suppressed routes (Name of route map)",
-										ValidateFunc:  validation.StringLenBetween(1, 128),
+										ValidateFunc: validation.StringLenBetween(1, 128),
 									},
 									"update_source_ip": {
 										Type: schema.TypeString, Optional: true, Description: "IP address",
-										ValidateFunc:  validation.IsIPv4Address,
+										ValidateFunc: validation.IsIPv4Address,
 									},
 									"update_source_ipv6": {
 										Type: schema.TypeString, Optional: true, Description: "IPv6 address",
-										ValidateFunc:  validation.IsIPv6Address,
+										ValidateFunc: validation.IsIPv6Address,
 									},
 									"ethernet": {
 										Type: schema.TypeInt, Optional: true, Description: "Ethernet interface (Port number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"loopback": {
 										Type: schema.TypeInt, Optional: true, Description: "Loopback interface (Port number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"ve": {
 										Type: schema.TypeInt, Optional: true, Description: "Virtual ethernet interface (Virtual ethernet interface number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"trunk": {
 										Type: schema.TypeInt, Optional: true, Description: "Trunk interface (Trunk interface number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"lif": {
 										Type: schema.TypeString, Optional: true, Description: "Logical interface (Lif interface name)",
-										ValidateFunc:  validation.StringLenBetween(1, 15),
+										ValidateFunc: validation.StringLenBetween(1, 15),
 									},
 									"tunnel": {
 										Type: schema.TypeInt, Optional: true, Description: "Tunnel interface (Tunnel interface number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"weight": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Set default weight for routes from this neighbor",
@@ -1608,7 +1608,7 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"peer_group_name": {
 										Type: schema.TypeString, Optional: true, Description: "Configure peer-group (peer-group name)",
-										ValidateFunc:  validation.StringLenBetween(1, 128),
+										ValidateFunc: validation.StringLenBetween(1, 128),
 									},
 									"activate": {
 										Type: schema.TypeInt, Optional: true, Default: 1, Description: "Enable the Address Family for this Neighbor",
@@ -1616,7 +1616,7 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"advertisement_interval": {
 										Type: schema.TypeInt, Optional: true, Description: "Minimum interval between sending BGP routing updates (time in seconds)",
-										ValidateFunc:  validation.IntBetween(1, 600),
+										ValidateFunc: validation.IntBetween(1, 600),
 									},
 									"allowas_in": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Accept as-path with my AS present in it",
@@ -1628,7 +1628,7 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"as_origination_interval": {
 										Type: schema.TypeInt, Optional: true, Description: "Minimum interval between sending AS-origination routing updates (time in seconds)",
-										ValidateFunc:  validation.IntBetween(1, 600),
+										ValidateFunc: validation.IntBetween(1, 600),
 									},
 									"dynamic": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Advertise dynamic capability to this neighbor",
@@ -1656,7 +1656,7 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"default_originate": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Originate default route to this neighbor",
-										ValidateFunc:  validation.IntBetween(0, 1),
+										ValidateFunc: validation.IntBetween(0, 1),
 									},
 									"route_map": {
 										Type: schema.TypeString, Optional: true, Description: "Route-map to specify criteria to originate default (route-map name)",
@@ -1668,7 +1668,7 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"disallow_infinite_holdtime": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "BGP per neighbor disallow-infinite-holdtime",
-										ValidateFunc:  validation.IntBetween(0, 1),
+										ValidateFunc: validation.IntBetween(0, 1),
 									},
 									"distribute_lists": {
 										Type: schema.TypeList, Optional: true, Description: "",
@@ -1753,7 +1753,7 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"next_hop_self": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Disable the next hop calculation for this neighbor",
-										ValidateFunc:  validation.IntBetween(0, 1),
+										ValidateFunc: validation.IntBetween(0, 1),
 									},
 									"override_capability": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Override capability negotiation result",
@@ -1831,39 +1831,39 @@ func resourceRouterBgp() *schema.Resource {
 									},
 									"unsuppress_map": {
 										Type: schema.TypeString, Optional: true, Description: "Route-map to selectively unsuppress suppressed routes (Name of route map)",
-										ValidateFunc:  validation.StringLenBetween(1, 128),
+										ValidateFunc: validation.StringLenBetween(1, 128),
 									},
 									"update_source_ip": {
 										Type: schema.TypeString, Optional: true, Description: "IP address",
-										ValidateFunc:  validation.IsIPv4Address,
+										ValidateFunc: validation.IsIPv4Address,
 									},
 									"update_source_ipv6": {
 										Type: schema.TypeString, Optional: true, Description: "IPv6 address",
-										ValidateFunc:  validation.IsIPv6Address,
+										ValidateFunc: validation.IsIPv6Address,
 									},
 									"ethernet": {
 										Type: schema.TypeInt, Optional: true, Description: "Ethernet interface (Port number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"loopback": {
 										Type: schema.TypeInt, Optional: true, Description: "Loopback interface (Port number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"ve": {
 										Type: schema.TypeInt, Optional: true, Description: "Virtual ethernet interface (Virtual ethernet interface number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"trunk": {
 										Type: schema.TypeInt, Optional: true, Description: "Trunk interface (Trunk interface number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"lif": {
 										Type: schema.TypeString, Optional: true, Description: "Logical interface (Lif interface name)",
-										ValidateFunc:  validation.StringLenBetween(1, 15),
+										ValidateFunc: validation.StringLenBetween(1, 15),
 									},
 									"tunnel": {
 										Type: schema.TypeInt, Optional: true, Description: "Tunnel interface (Tunnel interface number)",
-										ValidateFunc:  validation.IntAtLeast(1),
+										ValidateFunc: validation.IntAtLeast(1),
 									},
 									"weight": {
 										Type: schema.TypeInt, Optional: true, Default: 0, Description: "Set default weight for routes from this neighbor",
